@@ -1,0 +1,38 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: "2023-Present",
+        title: "Visual Designer",
+        company: "Gonzz Design Studio",
+        description: "Visual designer and aspiring frontend developer driven to excel in this profession. Proficient in design software and web development tools and technologies. My goal is to combine technical expertise with creative focus to craft unique, professional user-centered solutions",
+        link: "https://www.gonzz.art",
+        stack: "Adobe CC | Figma | Framer | HTML | CSS | TailwindCSS | Astro"
+    },
+    {
+        date: "2020-2023",
+        title: "Operations Manager",
+        company: "Yorokobi Sushi",
+        description: "Team recruitment, training and management. I was in charge of administrative tasks, customer satisfaction, social media and design using different technologies and tools to help me optimize the business",
+        stack: "Office | Google Products | Notion | Illustrator | Photoshop | Wordpress | Social Media"
+    },
+    {
+        date: "2014-2020",
+        title: "Sales Rep | Customer Care",
+        company: "My Background",
+        description: "I have an extense background. Started as a waiter in a seafood restaurant, moved to sales and customer support in call center setting. Then live translation and finally launching a small food business I was always driven to resolve problems and find ways to optimize my job and passionate about design"
+    }
+]
+---
+
+<ol class="relative border-s border-[#e8e4ea] dark:border-gray-700 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem { ... experience} />
+            </li>
+        ))
+    }              
+
+</ol>
