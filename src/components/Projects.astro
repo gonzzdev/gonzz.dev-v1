@@ -2,79 +2,86 @@
 const TAGS = {
   HTML: {
     name: "HTML",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "bg-[#3a333f] text-[#e8e4ea]"
   },
   TAILWINDCSS: {
     name: "Tailwind CSS",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "bg-[#3a333f] text-[#e8e4ea]"
   },
   CSS: {
     name: "CSS",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "bg-[#3a333f] text-[#e8e4ea]"
   },
   JAVASCRIPT: {
     name: "Javascript",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "bg-[#3a333f] text-[#e8e4ea]"
   },
   FRAMER: {
     name: "Framer",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "bg-[#3a333f] text-[#e8e4ea]"
   },
   WORDPRESS: {
     name: "Wordpress",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "bg-[#3a333f] text-[#e8e4ea]"
   },
   ADOBE: {
     name: "Adobe CC",
-    class: "bg-[#6c3f99] text-[e8e4ea]"
+    class: "bg-[#3a333f] text-[e8e4ea]"
   },
   ILLUSTRATOR: {
     name: "Illustrator",
-    class: "bg-[#6c3f99] text-[e8e4ea]"
+    class: "bg-[#3a333f] text-[e8e4ea]"
   },
   PHOTOSHOP: {
     name: "Photoshop",
-    class: "bg-[#6c3f99] text-[e8e4ea]"
+    class: "bg-[#3a333f] text-[e8e4ea]"
   },
   FIGMA: {
     name: "Figma",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "bg-[#3a333f] text-[#e8e4ea]"
+  },
+  SOCIALMEDIA: {
+    name: "Social Media",
+    class: "bg-[#3a333f] text-[e8e4ea]"
   }
 }
+
+// Add github repo, links and refines images.
+
 const PROJECTS = [
   {
-    title: "Gonzz.Art - Design gallery",
+    title: "Sofi.Dev - Visual identity",
     description:
-      "Digital showcase of my design experimentation. Here I gather recommendations, books and showcase my merchandising.",
+      "Logotype, brand guidelines and design assets for a twitch streamer and content creator in the software industry.",
     link: "https://gonzz.art",
+    image: "/projects/sofidev.png",
+    tags: [TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP, TAGS.FIGMA, TAGS.FRAMER, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "Don Monchis - Branding",
+    description:
+      "Don Monchis is a beloved chicken & fries dark kitchen in Bahía de Banderas, a mayan beach paradise. We like it simple and tasty is their motto. If you want to try the best fast food in Nuevo Vallarta, call these guys.",
+    link: "https://www.behance.net/gallery/196862755/Don-Monchis-Logo-Design?tracking_source=search_projects|gonzz&l=9",
+    image: "/projects/donmonchis.png",
+    tags: [TAGS.ADOBE, TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP, TAGS.SOCIALMEDIA]
+  },
+  {
+    title: "Gonzz.Art - Personal Project",
+    description:
+      "Digital showcase of my design experimentation. Book recomendations and other small projects. Kinda like a merch store too. 🛒",
+    link: "https://gonzz.art",
+    github: "",
     image: "/projects/gonzzart.png",
-    tags: [TAGS.ADOBE, TAGS.FIGMA, TAGS.FRAMER, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
+    tags: [TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP, TAGS.FIGMA, TAGS.FRAMER, TAGS.HTML,TAGS.CSS],
   },
   {
     title: "Yorokobi Sushi - Branding & Website",
     description:
-      "Designed a bold, stunning brand from the ground up. Created brand assets, logotype, brand guidelines, digital and printed materials.",
-    link: "https://www.behance.net/gallery/196866463/Yorokobi-Sushi-Logo-Design?tracking_source=search_projects|gonzz&l=8",
+      "Yorokobi Sushi Express has served the best rolls and Asian food in the zone for 2+ years. The client needed a total redesign. Establishing a connection with existing clients and captivating new ones.",
+    link: "https://www.behance.net/gallery/196866463/Yorokobi-Sushi-Logo-Design",
     image: "/projects/yorokobi.png",
-    tags: [TAGS.ADOBE, TAGS.FIGMA, TAGS.WORDPRESS, TAGS.FRAMER]
-  },
-  {
-    title: "Don Monchis - Branding & Website",
-    description:
-      "We can have functional sites and products whitout them being total eye killers, right?. This is a minimalistic, personal blog where I talk about the design principles applied to the web. I gather resources, books and good practices.",
-    link: "https://www.behance.net/gallery/196862755/Don-Monchis-Logo-Design?tracking_source=search_projects|gonzz&l=9",
-    image: "/projects/donmonchis.png",
-    tags: [TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP, TAGS.FIGMA, TAGS.WORDPRESS],
-  },
-  {
-    title: "muchotexto.site - Blog",
-    description:
-      "We can have functional sites and products whitout them being total eye killers, right?. This is a minimalistic, personal blog where I talk about the design principles applied to the web. I gather resources, books and good practices.",
-    link: "https://muchotexto.site",
-    github: "https://github.com/gonzzdev/design-guidelines",
-    image: "/projects/muchotexto.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT]
-  }
+  },
 ]
 ---
 
@@ -89,16 +96,16 @@ const PROJECTS = [
         transition duration-500 ease-in-out transform 
         shadow-xl overflow-clip rounded-xl 
         sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl 
-        lg:border lg:border-[#0f0c11] lg:hover:border-[#ff9933]/50 lg:hover:bg-gray-800/50">
+        lg:border-[2px] lg:border-[#0f0c11] lg:hover:border-[#ff9933]/50 lg:hover:bg-gray-800/50">
 
       <a href={link} target="_blank" rel="noopener">
-        <img alt="Project screenshot" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        <img alt="Project screenshot" class="object-cover object-top w-full sm:w-fit h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
       </a>
     </div>
   </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-[#e8e4ea] dark:text-gray-100">
+    <h3 class="text-2xl font-bold text-[#0f0c11] dark:text-[#e8e4ea]">
       {title}
     </h3>
     <div class="flex flex-wrap mt-2">
@@ -114,7 +121,7 @@ const PROJECTS = [
           ))}
         </ul>
 
-      <div class="mt-2 text-[#e8e4ea] dark:text-gray-400">{description}</div>
+      <div class="mt-2 text-[#0f0c11] font-semibold dark:text-[#e8e4ea]/80">{description}</div>
 
     </div>
   </div>

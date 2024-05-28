@@ -1,10 +1,108 @@
-<header class="flex justify-between items-center py-5 w-full xl:w-[1120px] mx-auto">
-    <a href="https://www.linkedin.com/in/gonzz-art/" target="_blank" rel="noopener"><img class="w-[70px] h-[30px]" src="./logo-4.svg" alt="Gonzz logo"></a>
-     
-    <nav class="flex flex-row gap-x-10 opacity-80">
-        <a class="font-medium hover:scale-110 transition hover:text-[#ff9933]" href="#experience">Experience</a>
-        <a class="font-medium hover:scale-110 transition hover:text-[#ff9933]" href="#projects">Projects</a>
-        <a class="font-medium hover:scale-110 transition hover:text-[#ff9933]" href="#contact">Contact</a>
-        <a class="font-medium hover:scale-110 transition hover:text-[#ff9933]" href="https://josegonz.site" target="_blank" rel="noopener">Links</a>
-    </nav>
+---
+import ThemeToggle from "./ThemeToggle.astro"
+
+const navItems = [
+  {
+    title: "Home",
+    label: "home",
+    url: "#",
+  },
+  {    
+    title: "Experience",
+    label: "experience",
+    url:"/#experience",
+  },
+  {    
+    title: "Projects",
+    label: "projects",
+    url:"/#projects",
+  },
+  {    
+    title: "Contact",
+    label: "contact",
+    url:"/#contact",
+  },
+  {    
+    title: "Links",
+    label: "links",
+    url:"https://josegonz.site",
+  },
+]
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex px-3 text-sm font-semibold rounded-full text-[#0f0c11] dark:text-[#e8e4ea] justify-center items-center"
+  >
+    {
+        navItems.map((link) => (
+            <a
+                class="relative block px-2 py-2 transition hover:text-[#ff9933] dark:hover:text-[#ff9933]"
+                aria-label={link.label}
+                href={link.url}
+            >
+                {link.title}
+            </a>
+        ))
+    }
+    <ThemeToggle />
+  </nav>
 </header>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+      const sections = document.querySelectorAll("section")
+      const navItems = document.querySelectorAll("header nav a")
+  
+      const callback = (entries: any[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navItems.forEach((item) => {
+              if (item.getAttribute("aria-label") == entry.target.id) {
+                item.classList.add("text-yellow-500")
+              } else {
+                item.classList.remove("text-yellow-500")
+              }
+            })
+          }
+        })
+      }
+  
+      const observer = new IntersectionObserver(callback, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.3,
+      })
+  
+      sections.forEach((section) => {
+        observer.observe(section)
+      })
+  
+      // Cleanup function
+      document.onvisibilitychange = () => {
+        if (document.visibilityState === "hidden") {
+          observer.disconnect()
+        } else {
+          sections.forEach((section) => {
+            observer.observe(section)
+          })
+        }
+      }
+    })
+  </script>
+  
+  <style>
+    nav {
+      animation: nav-shadown 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+  
+    @keyframes nav-shadown {
+      to {
+        @apply shadow-lg ring-1 backdrop-blur dark:bg-[#0f0c11] bg-[#6c3f99]/40 ring-[#e8e4ea]/10;
+      }
+    }
+  </style>
