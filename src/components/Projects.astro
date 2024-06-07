@@ -16,6 +16,10 @@ const TAGS = {
     name: "Javascript",
     class: "bg-[#3a333f] text-[#e8e4ea]"
   },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-[#3a333f] text-[#e8e4ea]"
+  },
   FRAMER: {
     name: "Framer",
     class: "bg-[#3a333f] text-[#e8e4ea]"
@@ -46,48 +50,40 @@ const TAGS = {
   }
 }
 
-// Add github repo, links and refines images.
+// Add github to project.maps to add repos.
+// Add muchotexto.site project
 
 const PROJECTS = [
   {
-    title: "Sofi.Dev - Visual identity",
+    title: "StreamByte - Branding & Website",
     description:
-      "Logotype, brand guidelines and design assets for a twitch streamer and content creator in the software industry.",
-    link: "https://gonzz.art",
-    image: "/projects/sofidev.png",
-    tags: [TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP, TAGS.FIGMA, TAGS.FRAMER, TAGS.HTML, TAGS.CSS],
+      "I'm grateful to be part of this project. StreamByte is a tech related blog where we dive into software development and the tech industry. And computer store located in Puerto Vallarta, MX.",
+    link: "https://github.com/gonzzdev",
+    image: "/projects/streambyte.webp",
+    tags: [TAGS.ADOBE, TAGS.FRAMER, TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.ASTRO],
+  },
+  {
+    title: "Yorokobi Sushi - Branding",
+    description:
+      "Yorokobi Sushi Express has served the best rolls and Asian food in the zone for 2+ years. We needed a total redesign and website implementation. Establishing a connection with existing customers and captivating new ones.",
+    link: "https://www.behance.net/gallery/196866463/Yorokobi-Sushi-Logo-Design",
+    image: "/projects/yorokobi.webp",
+    tags: [TAGS.PHOTOSHOP, TAGS.ILLUSTRATOR, TAGS.FIGMA, TAGS.FRAMER]
   },
   {
     title: "Don Monchis - Branding",
     description:
-      "Don Monchis is a beloved chicken & fries dark kitchen in Bahía de Banderas, a mayan beach paradise. We like it simple and tasty is their motto. If you want to try the best fast food in Nuevo Vallarta, call these guys.",
+      "Don Monchis is a beloved chicken & fries dark kitchen in Bahía de Banderas, a mayan beach paradise. We like it simple and tasty is their motto. Check them out if you want to try the best fast food in Nuevo Vallarta.",
     link: "https://www.behance.net/gallery/196862755/Don-Monchis-Logo-Design?tracking_source=search_projects|gonzz&l=9",
-    image: "/projects/donmonchis.png",
-    tags: [TAGS.ADOBE, TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP, TAGS.SOCIALMEDIA]
-  },
-  {
-    title: "Gonzz.Art - Personal Project",
-    description:
-      "Digital showcase of my design experimentation. Book recomendations and other small projects. Kinda like a merch store too. 🛒",
-    link: "https://gonzz.art",
-    github: "",
-    image: "/projects/gonzzart.png",
-    tags: [TAGS.ILLUSTRATOR, TAGS.PHOTOSHOP, TAGS.FIGMA, TAGS.FRAMER, TAGS.HTML,TAGS.CSS],
-  },
-  {
-    title: "Yorokobi Sushi - Branding & Website",
-    description:
-      "Yorokobi Sushi Express has served the best rolls and Asian food in the zone for 2+ years. The client needed a total redesign. Establishing a connection with existing clients and captivating new ones.",
-    link: "https://www.behance.net/gallery/196866463/Yorokobi-Sushi-Logo-Design",
-    image: "/projects/yorokobi.png",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT]
-  },
+    image: "/projects/donmonchis.webp",
+    tags: [TAGS.PHOTOSHOP, TAGS.ILLUSTRATOR, TAGS.FIGMA, TAGS.FRAMER, TAGS.SOCIALMEDIA]
+  }
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div 
