@@ -2,76 +2,64 @@
 const TAGS = {
   HTML: {
     name: "HTML",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
-  },
-  TAILWINDCSS: {
-    name: "Tailwind CSS",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
+    class: "bg-[#e34f26] text-[#e8e4ea]"
   },
   CSS: {
     name: "CSS",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
+    class: "bg-[#264de4] text-[#e8e4ea]"
   },
   JAVASCRIPT: {
-    name: "Javascript",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
+    name: "JavaScript",
+    class: "bg-[#F0DB4F] text-[#0f0c11]"
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-[#3178c6] text-[#e8e4ea]"
+  },
+  TAILWINDCSS: {
+    name: "Tailwind CSS",
+    class: "bg-[#3B82F6] text-[#e8e4ea]"
   },
   ASTRO: {
     name: "Astro",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
+    class: "bg-[#0f0c11] text-[#e8e4ea] border"
   },
-  FRAMER: {
-    name: "Framer",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
+  NEXT: {
+    name: "NEXT.js",
+    class: "bg-[#030303] text-[#e8e4ea]"
   },
-  WORDPRESS: {
-    name: "Wordpress",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
+  DESIGN: {
+    name: "Web Design",
+    class: "bg-[#6c3f99] text-[#e8e4ea]"
   },
-  ADOBE: {
-    name: "Adobe CC",
-    class: "bg-[#3a333f] text-[e8e4ea]"
-  },
-  FIGMA: {
-    name: "Figma",
-    class: "bg-[#3a333f] text-[#e8e4ea]"
-  }
 }
 
 // Add muchotexto.site project
 
 const PROJECTS = [
   {
-    title: "StreamByte - Personal Blog",
+    title: "StreamByte (Working on it)",
     description:
-      "Design & Frontend Development for everybody. This is my personal blog where I share my progress, tools and resources to help other students and self-taught developers.",
+      "Learn frontend development with real and professional projects.",
     link: "https://streambyte.mx",
     image: "/projects/streambyte.webp",
-    tags: [TAGS.ADOBE, TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.JAVASCRIPT],
+    tags: [TAGS.DESIGN, TAGS.NEXT, TAGS.TAILWINDCSS, TAGS.TYPESCRIPT],
   },
   {
-    title: "Sofi.Dev - Visual Identity",
+    title: "malditojefe.chat",
     description:
-      "Designed the visual identity of Sofi.Dev, developer & content creator focused in the tech industry. Created a cohesive design system and brand elements to elevate her personal brand.",
-    link: "#",
-    image: "/projects/sofidev.png",
-    tags: [TAGS.ADOBE, TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.JAVASCRIPT],
+      "Chatbot game featuring an angry boss asking you to work in your vacations.",
+    link: "https://malditojefe-chat.vercel.app/",
+    image: "/projects/malditojefe.png",
+    tags: [TAGS.DESIGN, TAGS.NEXT, TAGS.TAILWINDCSS, TAGS.TYPESCRIPT],
   },
   {
-    title: "Don Monchis - Branding & Website",
+    title: "Typing speed test",
     description:
-      "Chicken & Fries, that's all Don Monchis needs to captivate its target audience and win their hearts, and their arteries.",
-    link: "https://donmonchis.shop",
-    image: "/projects/donmonchis.webp",
-    tags: [TAGS.ADOBE, TAGS.FIGMA, TAGS.ASTRO, TAGS.TAILWINDCSS, TAGS.JAVASCRIPT]
-  },
-  {
-    title: "Yorokobi Sushi - Branding",
-    description:
-      "Asian food shop located in Puerto Vallarta, MX. The best rolls and fried rice of the bay. Also selling top asian candies and snacks.",
-    link: "https://www.behance.net/gallery/196866463/Yorokobi-Sushi-Logo-Design",
-    image: "/projects/yorokobi.webp",
-    tags: [TAGS.ADOBE, TAGS.FIGMA, TAGS.FRAMER]
+      "A minimal typing test game. Test your speed and improve your typing skills.",
+    link: "https://gonzzdev.github.io/typing-game-v1/",
+    image: "/projects/typetest.png",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
   },
 ]
 ---
@@ -104,7 +92,7 @@ const PROJECTS = [
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                class={`flex gap-x-2 rounded-full text-[10px] font-semibold ${tag.class} py-1 px-2 whitespace-nowrap `}
               >
                 {tag.name}
               </span>
@@ -120,5 +108,4 @@ const PROJECTS = [
     ))
   }
 </div>
-
 
