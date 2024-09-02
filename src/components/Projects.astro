@@ -2,39 +2,33 @@
 const TAGS = {
   HTML: {
     name: "HTML",
-    class: "bg-[#e34f26] text-[#e8e4ea]"
+    class: "text-[#e8e4ea] border-2 border-[#6c3f99] hover:bg-[#e34f26] hover:border-transparent hover:scale-105 transition duration-200"
   },
   CSS: {
     name: "CSS",
-    class: "bg-[#264de4] text-[#e8e4ea]"
+    class: "text-[#e8e4ea] border-2 border-[#6c3f99] hover:bg-[#264de4] hover:border-transparent hover:scale-105 transition duration-200"
   },
   JAVASCRIPT: {
     name: "JavaScript",
-    class: "bg-[#F0DB4F] text-[#0f0c11]"
+    class: "border-2 border-[#6c3f99] text-[#e8e4ea] hover:bg-[#F0DB4F] hover:border-transparent hover:text-[#0f0c11] hover:scale-105 transition duration-200"
   },
   TYPESCRIPT: {
     name: "TypeScript",
-    class: "bg-[#3178c6] text-[#e8e4ea]"
+    class: "border-2 border-[#6c3f99] text-[#e8e4ea] hover:bg-[#3178c6] hover:border-transparent hover:scale-105 transition duration-200"
   },
   TAILWINDCSS: {
-    name: "Tailwind CSS",
-    class: "bg-[#3B82F6] text-[#e8e4ea]"
+    name: "TailwindCSS",
+    class: "border-2 border-[#6c3f99] text-[#e8e4ea] hover:bg-[#3B82F6] hover:border-transparent hover:scale-105 transition duration-200"
   },
   ASTRO: {
     name: "Astro",
-    class: "bg-[#0f0c11] text-[#e8e4ea] border"
+    class: "border-2 border-[#6c3f99] text-[#e8e4ea] hover:bg-[#0f0c11] hover:border-transparent hover:scale-105 transition duration-200"
   },
   NEXT: {
     name: "NEXT.js",
-    class: "bg-[#030303] text-[#e8e4ea]"
-  },
-  DESIGN: {
-    name: "Web Design",
-    class: "bg-[#6c3f99] text-[#e8e4ea]"
+    class: "border-2 border-[#6c3f99] text-[#e8e4ea] hover:bg-[#030303] hover:border-[#e8e4ea] hover:scale-105 transition duration-200"
   },
 }
-
-// Add muchotexto.site project
 
 const PROJECTS = [
   {
@@ -43,7 +37,7 @@ const PROJECTS = [
       "Learn frontend development with real and professional projects.",
     link: "https://streambyte.mx",
     image: "/projects/streambyte.webp",
-    tags: [TAGS.DESIGN, TAGS.NEXT, TAGS.TAILWINDCSS, TAGS.TYPESCRIPT],
+    tags: [TAGS.NEXT, TAGS.TAILWINDCSS, TAGS.TYPESCRIPT],
   },
   {
     title: "malditojefe.chat",
@@ -51,7 +45,7 @@ const PROJECTS = [
       "Chatbot game featuring an angry boss asking you to work in your vacations.",
     link: "https://malditojefe-chat.vercel.app/",
     image: "/projects/malditojefe.png",
-    tags: [TAGS.DESIGN, TAGS.NEXT, TAGS.TAILWINDCSS, TAGS.TYPESCRIPT],
+    tags: [TAGS.NEXT, TAGS.TAILWINDCSS, TAGS.TYPESCRIPT],
   },
   {
     title: "Typing speed test",
@@ -64,7 +58,7 @@ const PROJECTS = [
 ]
 ---
 
-<div class="flex flex-col gap-y-16">
+<div class="flex flex-col gap-y-12">
   {
     PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
@@ -73,34 +67,33 @@ const PROJECTS = [
         class="relative flex flex-col items-center 
         col-span-6 row-span-5 gap-8 
         transition duration-500 ease-in-out transform 
-        shadow-xl overflow-clip rounded-xl 
-        sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl 
-        lg:border-[2px] lg:border-[#0f0c11] lg:hover:border-[#ff9933]/50 lg:hover:bg-gray-800/50">
+        shadow-xl overflow-clip rounded-lg 
+        sm:rounded-xl md:group-hover:translate-x-2 md:group-hover:shadow-2xl 
+        lg:border-[2px] lg:border-[#0f0c11] lg:hover:border-[#6c3f99]/50 lg:hover:bg-gray-800/50">
 
       <a href={link} target="_blank" rel="noopener">
-        <img alt="Project screenshot" class="object-cover object-top w-full sm:w-fit h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" src={image} />
+        <img alt="Project screenshot" class="object-cover object-top w-full sm:w-fit h-56 transition duration-500 sm:h-full md:scale-100 md:group-hover:scale-125" src={image} />
       </a>
     </div>
   </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
+  <div class="w-full bg-[#17131A] border-2 border-[#e8e4ea]/10 rounded-lg pt-4 px-4 md:w-1/2 md:max-w-lg">
     <h3 class="text-2xl font-bold text-[#0f0c11] dark:text-[#e8e4ea]">
       {title}
     </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-1">
+    <div class="flex flex-wrap">
+      <div class="mt-2 text-[#0f0c11] font-medium dark:text-[#e8e4ea]/80">{description}</div>
+      <ul class="flex flex-row mt-20 gap-x-1">
           {tags.map((tag) => (
             <li>
               <span
-                class={`flex gap-x-2 rounded-full text-[10px] font-semibold ${tag.class} py-1 px-2 whitespace-nowrap `}
+                class={`flex mr-1 rounded-full text-xs font-medium ${tag.class} py-1.5 px-2 whitespace-nowrap `}
               >
                 {tag.name}
               </span>
             </li>
           ))}
         </ul>
-
-      <div class="mt-2 text-[#0f0c11] font-semibold dark:text-[#e8e4ea]/80">{description}</div>
 
     </div>
   </div>

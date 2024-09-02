@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Badge from '../components/Badge.astro';
+import Button from '../components/Button.astro';
 import Experience from '../components/Experience.astro';
 import Projects from '../components/Projects.astro';
 import Forms from '../components/Forms.astro';
@@ -13,78 +14,58 @@ description="Hire José González to design your brand and create your professio
 >
 	<main class="px-4">
 		<SectionContainer class="py-44 pb-20">
-
-			<!-- Hero -->
-			 <div class="flex items-center justify-start">
-				<img 
-					class="rounded-lg size-24 mr-4 border-[2px] border-[#0f0c11] hover:border-[#ff9933] hover:animate-jiggle transition duration-500 md:mr-6 md:size-36"
-					src="https://avatars.githubusercontent.com/u/130326374?v=4" 
-					alt="GitHub Profile Picture" 
-				 />
-				<div>
-					<a 
-						href="https://www.linkedin.com/in/gonzz-dev/" 
-						target="_blank" 
-						rel="noopener" 
-						class="flex justify-start -mb-8">
-					  <Badge class="justify-center">Available | Let's talk!</Badge>
-					</a>
-		  
-					<h1 class="text-[#0f0c11] dark:text-[#e8e4ea] text-2xl text-center justify-start md:text-6xl font-semibold flex flex-row gap-x-4 pb-4 lg:pb-4">
-						Hey there!
-						<img src="./raising-hands.webp" alt="Alien saying hi animation" class="size-6 md:size-14">
-					</h1>
-
-					<!-- Social media links -->
-					<ul class="flex justify-start gap-2 items-center mb-8 md:gap-6">
-
-						<li class="w-[36px] bg-transparent border-[2px] border-[#6c3f99] hover:bg-[#6c3f99]/40 hover:dark:bg-[#6c3f99]/40 rounded-full px-2 py-2 dark:bg-transparent hover:scale-125 transition">
-							<a href="https://www.linkedin.com/in/gonzz-dev/" target="_blank" rel="noopener">
-								<img src="./icons/linkedin.svg" alt="LinkedIn logo">
-							</a>
-						</li>
-
-						<li class="w-[36px] bg-transparent border-[2px] border-[#6c3f99] hover:bg-[#6c3f99]/40 hover:dark:bg-[#6c3f99]/40 rounded-full px-2 py-2 dark:bg-transparent hover:scale-125 transition">
-							<a href="https://www.github.com/gonzzdev" target="_blank" rel="noopener">
-								<img src="./icons/github.svg" alt="GitHub logo">
-							</a>
-						</li>
-
-						<li class="w-[36px] bg-transparent border-[2px] border-[#6c3f99] hover:bg-[#6c3f99]/40 hover:dark:bg-[#6c3f99]/40 rounded-full px-2 py-2 dark:bg-transparent hover:scale-125 transition">
-							<a href="https://www.twitter.com/gonzz_dev" target="_blank" rel="noopener">
-								<img src="./icons/twitter.svg" alt="Twitter logo">
-							</a>
-						</li>
-
-						<li class="w-[36px] bg-transparent border-[2px] border-[#6c3f99] hover:bg-[#6c3f99]/40 hover:dark:bg-[#6c3f99]/40 rounded-full px-2 py-2 dark:bg-transparent hover:scale-125 transition">
-							<a href="https://www.youtube.com/channel/UCUWgFhhL4YoEpylnXCrb_Cg" target="_blank" rel="noopener">
-								<img src="./icons/youtube.svg" alt="YouTube logo">
-							</a>
-						</li>
-
-						<li class="w-[36px] bg-transparent border-[2px] border-[#6c3f99] hover:bg-[#6c3f99]/40 hover:dark:bg-[#6c3f99]/40 rounded-full px-2 py-2 dark:bg-transparent hover:scale-125 transition">
-							<a href="https://gonzz.life" target="_blank" rel="noopener">
-								<img src="./icons/link.svg" alt="Link to social page">
-							</a>
-						</li>
-					</ul>
-				 </div>
+			<!-- Profile tags -->
+			 <div class="flex flex-col mb-4">
+				<div class="flex">
+					<img 
+						class="rounded-full size-24 mr-4 border-[2px] border-[#0f0c11] hover:border-[#ff9933] hover:scale-110 transition duration-200 md:mr-6 md:size-16"
+						src="https://avatars.githubusercontent.com/u/130326374?v=4" 
+						alt="GitHub Profile Picture" 
+					 />
+					<div>
+						<h1 class="text-[#0f0c11] dark:text-[#e8e4ea] text-lg text-center justify-start md:text-2xl font-semibold flex flex-row gap-x-4 mb-2">
+							José Luis Gutiérrez González
+						</h1>
+	
+						<a 
+							href="https://www.linkedin.com/in/gonzz-dev/" 
+							target="_blank" 
+							rel="noopener" 
+							class="flex justify-start gap-4">
+						  <Badge class="justify-center">Available | Let's talk!</Badge>
+						  <Badge class="justify-center">Nuevo Vallarta, MX</Badge>
+						</a>
+					 </div>
+				</div>
 			 </div>
 
-			<h2 class=" justify-center text-md lg:text-xl font-medium text-wrap max-w-[1000px]">
-				<span class="text-[#0f0c11] dark:text-[#e8e4ea]/80">I love </span>
-				<span class="text-[#FF9933] font-bold">Designing </span><span class="text-[#0f0c11] dark:text-[#e8e4ea]/80">& </span><span class="text-[#FF9933] font-bold">Developing </span><span class="text-[#0f0c11] dark:text-[#e8e4ea]/80"> websites for companies and brands. Currently living in <a href="https://www.google.com.mx/maps/place/63735+Nuevo+Vallarta,+Nay./@20.6970721,-105.311228,14z/data=!3m1!4b1!4m6!3m5!1s0x842146a3108c50c7:0x4cb5066faa51643d!8m2!3d20.6986205!4d-105.2964898!16s%2Fm%2F080j413?entry=ttu" target="_blank" rel="noopener"><em>Nuevo Vallarta, México</em></a> and working <em>everywhere.</em></span>
+			 <!-- Introduction -->
+			<h2 class=" justify-center text-5xl leading-tight font-bold text-wrap max-w-[1000px]">
+				<img src="/logo-5.png" alt="Cat illustration" class=" absolute ml-[480px] -mt-[70px] w-28 hover:animate-tada" />
+				<p class="text-[#0f0c11] dark:text-[#e8e4ea]/80">Self-taught Front-End Developer. </p>
+				<span class="text-[#0f0c11] dark:text-[#e8e4ea]/80">I love contributing to the creative an technical </span>
+				<span class="relative group animate-text bg-gradient-to-r from-[#e8e4ea] via-[#ff9933] to-[#6c3f99] bg-clip-text text-transparent transition">development </span>
+				<span class="text-[#0f0c11] dark:text-[#e8e4ea]/80"> or user interfaces, webs and apps.</span>
 			</h2>
 
-		</SectionContainer>
+			<!-- Buttons -->
+			 <ul class="flex gap-4 mt-12">
+				 <a href="">
+					 <Button>Download Resume</Button>
+				 </a>
+				 <a href="">
+					 <Button>See Projects</Button>
+				 </a>
+				 <a href="">
+					 <Button>Social Links</Button>
+				 </a>
+			</ul>
+				
 
-		<SectionContainer id="experience">
-			<h3 class="text-[#0f0c11] dark:text-[#e8e4ea] text-3xl font-semibold pt-20 mb-4">Work Experience</h3>
-			<Experience />
 		</SectionContainer>
 
 		<SectionContainer id="projects">
-			<h3 class="text-[#0f0c11] dark:text-[#e8e4ea] text-3xl font-semibold pt-20 mb-4">Projects</h3>
+			<h3 class="text-[#0f0c11] dark:text-[#e8e4ea] text-4xl font-semibold pt-20 mb-8">💻 Projects</h3>
 			<Projects />
 		</SectionContainer>
 
@@ -92,7 +73,7 @@ description="Hire José González to design your brand and create your professio
 			<Forms />
 		</SectionContainer>
 	</main>
-	<a href="#" class="fixed fill-[#e8e4ea] p-9 bottom-6 right-6 hidden md:block hover:scale-110 transition opacity-25 hover:opacity-100" >
+	<a href="#" class="fixed fill-[#e8e4ea] p-9 bottom-6 right-6 hidden md:block hover:scale-110 transition opacity-60 hover:opacity-100" >
 		<img class="size-12" src="./icons/circle-arrow-up.svg" alt="Scroll to top">
 	</a>
 </Layout>
